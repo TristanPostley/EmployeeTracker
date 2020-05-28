@@ -100,7 +100,6 @@ function start(){
 function AddEmployee() {
     connection.query("SELECT * FROM employee RIGHT JOIN role ON employee.role_id = role.role_id", (err, res) => {
         if(err) throw err;
-        console.table(res);
         inquirer.prompt([
             {
                 type: "input",
